@@ -1,4 +1,21 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+  background: whitesmoke;
+
+  .login {
+    margin: 10px 20px;
+    width: 100px;
+  }
+
+  .logout {
+    width: 100px;
+
+  }
+
+  p{
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+  }
+}

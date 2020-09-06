@@ -1,4 +1,18 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+  h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .addpost {
+    margin: 10px 20px;
+    width: 150px;
+  }
+
+  .list {
+    margin: 10px 0;
+    left: 550px;
+  }
+}

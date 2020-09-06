@@ -7,11 +7,16 @@ import clsx from 'clsx';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './NotFound.module.scss';
+import { Link } from 'react-router-dom';
+import { Button } from '@material-ui/core';
+
 
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
     <h2>NotFound</h2>
-    {children}
+    <Button component={Link} to={`/`} variant="outlined" color="primary" >
+        Go to main Page
+    </Button>
   </div>
 );
 
