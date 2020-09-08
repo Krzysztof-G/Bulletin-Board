@@ -3,9 +3,16 @@
 .root {
   p {
     margin: 30px 0;
+    font-size: 20px;
   }
-  .edit{
-    width: 150px;
-    margin: 10px 20px;
+
+  .edit {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width: 200px;
+    margin: 10px 20px 30px 10px;
+    color: whitesmoke;
+    background: rgb(115, 231, 124);
+    border: none;
   }
 }

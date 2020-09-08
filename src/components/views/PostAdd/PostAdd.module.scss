@@ -1,4 +1,27 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+  .addpost {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width: 200px;
+    margin: 10px 20px;
+    color: whitesmoke;
+    background: rgb(115, 231, 124);
+    border: none;
+  }
+
+  .addpicture {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width: 200px;
+    margin: 10px 20px;
+    color: whitesmoke;
+    background: rgb(115, 231, 124);
+    border: none;
+  }
+  .textfield{
+    color: aqua;
+  }
+
+}

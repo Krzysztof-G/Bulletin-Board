@@ -62,7 +62,7 @@ class Component extends React.Component {
     return (
       <div className={clsx(className, styles.root)}>
         <h2>Post</h2>
-        <form className={styles.root} noValidate autoComplete="off" onSubmit={e => this.handleSubmit(e)}>
+        <form className={styles.textfield} noValidate autoComplete="off" onSubmit={e => this.handleSubmit(e)}>
           <TextField
             id="standard-basic"
             label="Title"
@@ -95,17 +95,9 @@ class Component extends React.Component {
             value={price}
             onChange={e => this.handleChange(e, 'price')}
           /><br />
-          <Button
-            variant="outlined"
-            component="label"
-          >
+          <Button className={styles.addpicture} variant="outlined" component="label">
               Add picture
-            <input
-              type="file"
-              accept="image/*"
-              style={{ display: 'none' }}
-              onChange={e => this.handleChange(e, 'image')}
-            />
+            <input type="file" accept="image/*" style={{ display: 'none' }} onChange={e => this.handleChange(e, 'image')} />
           </Button><br />
           <InputLabel id="demo-simple-select-label" >Status</InputLabel>
           <Select
@@ -118,7 +110,7 @@ class Component extends React.Component {
             <MenuItem value={'published'}>published</MenuItem>
             <MenuItem value={'closed'}>closed</MenuItem>
           </Select><br />
-          <Button type="submit" variant="outlined" color="primary" className={styles.button}>Add post</Button>
+          <Button className={styles.addpost} type="submit" variant="outlined" color="primary" >Add post</Button>
         </form>
       </div>
 

@@ -16,13 +16,15 @@ const Component = ({className, children, posts, users}) => {
   return(
     <div className={clsx(className, styles.root)}>
       <h2>Posts</h2>
-      <Button className={styles.addpost} component={Link} to={`/post/add`} variant="outlined" color="primary" >
+      <Button className={styles.addnewpost} component={Link} to={`/post/add`} variant="outlined" color="primary" >
         Add new post
       </Button>
       <List>
         {posts.map(post => (
-          <ListItem key={post.id} className={styles.list} component={Link} to={`/post/${post.id}`} >
-            {post.title}
+          <ListItem className={styles.root} key={post.id} component={Link} to={`/post/${post.id}`}>
+            <Button className={styles.list}>
+              {post.title}
+            </Button>
           </ListItem>
         ))}
       </List>

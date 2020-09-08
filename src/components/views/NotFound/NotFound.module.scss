@@ -1,4 +1,13 @@
 @import '../../../styles/settings.scss';
 
-// .root {
-// }
+.root {
+  .notfound{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    margin: 10px 20px;
+    width: 200px;
+    color: whitesmoke;
+    background: rgb(115, 231, 124);
+    border: none;
+  }
+}

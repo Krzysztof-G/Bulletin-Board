@@ -1,21 +1,29 @@
 @import '../../../styles/settings.scss';
 
 .root {
-  background: whitesmoke;
 
   .login {
-    margin: 10px 20px;
-    width: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    margin: 10px 10px 10px 0;
+    width: 200px;
+    color: whitesmoke;
+    background: rgb(115, 231, 124);
+    border: none;
   }
 
   .logout {
-    width: 100px;
-
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+    width: 200px;
+    background: rgb(240, 100, 96);
+    color: whitesmoke;
+    border: none;
   }
 
-  p{
+  p {
     text-align: center;
-    font-size: 24px;
+    font-size: 60px;
     margin: 0;
   }
 }

@@ -14,7 +14,7 @@ import { Button } from '@material-ui/core';
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
     <h2>NotFound</h2>
-    <Button component={Link} to={`/`} variant="outlined" color="primary" >
+    <Button className={styles.notfound} component={Link} to={`/`} variant="outlined" color="primary" >
         Go to main Page
     </Button>
   </div>
