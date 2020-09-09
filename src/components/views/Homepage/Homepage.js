@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { connect } from 'react-redux';
-import { getAll, getUsers} from '../../../redux/postsRedux';
+import { getAllPublished, fetchPublished} from '../../../redux/postsRedux';
 
 import styles from './Homepage.module.scss';
 
@@ -42,18 +42,29 @@ Component.propTypes = {
   users: PropTypes.array,
 };
 
-const mapStateToProps = state => ({
-  posts: getAll(state),
-  users: getUsers(state),
-  //   someProp: reduxSelector(state),
-});
-
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
+// const mapStateToProps = state => ({
+//   posts: getAll(state),
+//   users: getUsers(state),
+//   //   someProp: reduxSelector(state),
 // });
 
-const Container = connect(mapStateToProps)(Component);
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+// // const mapDispatchToProps = dispatch => ({
+// //   someAction: arg => dispatch(reduxActionCreator(arg)),
+// // });
+
+// const Container = connect(mapStateToProps)(Component);
+// // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+
+const mapStateToProps = state => ({
+  posts: getAllPublished(state),
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPublishedPosts: () => dispatch(fetchPublished()),
+});
+
+const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+
 
 export {
   //Component as Homepage,
