@@ -64,8 +64,8 @@ class Component extends React.Component {
         <h2>Post</h2>
         <form className={styles.textfield} noValidate autoComplete="off" onSubmit={e => this.handleSubmit(e)}>
           <TextField
+            placeholder="Title"
             id="standard-basic"
-            label="Title"
             required
             inputProps={titleLenght}
             value={title}
@@ -73,7 +73,7 @@ class Component extends React.Component {
           /><br />
           <TextField
             id="standard-basic"
-            label="Content"
+            placeholder="Content"
             required
             inputProps={contentLenght}
             value={content}
@@ -81,7 +81,7 @@ class Component extends React.Component {
           /><br />
           <TextField
             id="standard-basic"
-            label="Email"
+            placeholder="Email"
             required
             type="email"
             value={email}
@@ -89,7 +89,7 @@ class Component extends React.Component {
           /><br />
           <TextField
             id="standard-basic"
-            label="Price"
+            placeholder="Price"
             required
             type="number"
             value={price}

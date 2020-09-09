@@ -13,7 +13,7 @@ import styles from './MainLayout.module.scss';
 const Component = ({className, children}) => (
   <div className={clsx(className, styles.root)}>
     <Header />
-    <Homepage />
+    {/* <Homepage /> */}
     {children}
   </div>
 );
