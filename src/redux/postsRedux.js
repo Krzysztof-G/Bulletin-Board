@@ -24,6 +24,7 @@ export const fetchSuccess = payload => ({ payload, type: FETCH_SUCCESS });
 export const fetchError = payload => ({ payload, type: FETCH_ERROR });
 export const addPost = payload => ({ payload, type: ADD_POST });
 export const editPost = payload => ({ payload, type: EDIT_POST });
+export const getAllPublished = ({posts}) => posts.data.filter(item => item.status === 'published');
 
 /* thunk creators */
 export const fetchPublished = () => {
@@ -34,6 +35,7 @@ export const fetchPublished = () => {
       .get('http://localhost:8000/api/posts')
       .then(res => {
         dispatch(fetchSuccess(res.data));
+        console.log(res.data);
       })
       .catch(err => {
         dispatch(fetchError(err.message || true));

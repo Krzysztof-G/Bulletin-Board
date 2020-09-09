@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { connect } from 'react-redux';
-import { getPost, getUsers } from '../../../redux/postsRedux';
+import { getAllPublished, fetchPublished} from '../../../redux/postsRedux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './Post.module.scss';
@@ -37,17 +37,26 @@ Component.propTypes = {
   users: PropTypes.array,
 };
 
-const mapStateToProps = (state, props) => ({
-  post: getPost(state, props.match.params.id),
-  users: getUsers(state),
-});
-
-// const mapDispatchToProps = dispatch => ({
-//   someAction: arg => dispatch(reduxActionCreator(arg)),
+// const mapStateToProps = (state, props) => ({
+//   post: getPost(state, props.match.params.id),
+//   users: getUsers(state),
 // });
 
-const Container = connect(mapStateToProps)(Component);
-// const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+// // const mapDispatchToProps = dispatch => ({
+// //   someAction: arg => dispatch(reduxActionCreator(arg)),
+// // });
+
+// const Container = connect(mapStateToProps)(Component);
+// // const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
+const mapStateToProps = state => ({
+  posts: getAllPublished(state),
+});
+
+const mapDispatchToProps = dispatch => ({
+  fetchPublishedPosts: () => dispatch(fetchPublished()),
+});
+
+const Container = connect(mapStateToProps, mapDispatchToProps)(Component);
 
 export {
   //Component as Post,
