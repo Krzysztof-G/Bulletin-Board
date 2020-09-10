@@ -1,15 +1,15 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import clsx from "clsx";
+import clsx from 'clsx';
 
-import { connect } from "react-redux";
-import { getAll } from "../../../redux/postsRedux";
+import { connect } from 'react-redux';
+import { getAll } from '../../../redux/postsRedux';
 
-import styles from "./Homepage.module.scss";
+import styles from './Homepage.module.scss';
 
-import { Link } from "react-router-dom";
-import { Button, ListItem, List } from "@material-ui/core";
+import { Link } from 'react-router-dom';
+import { Button, ListItem, List } from '@material-ui/core';
 
 const Component = ({ className, children, posts, users }) => {
   console.log(posts);
