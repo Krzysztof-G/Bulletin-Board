@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import clsx from 'clsx';
 
 import { connect } from 'react-redux';
-import { getUsers, getAll, fetchPublished } from '../../../redux/postsRedux';
+import { getUsers, getPost, fetchPublished } from '../../../redux/postsRedux';
 // import { reduxSelector, reduxActionCreator } from '../../../redux/exampleRedux.js';
 
 import styles from './Post.module.scss';
@@ -25,7 +25,7 @@ class Component extends React.Component {
 
     return(
       <div className={clsx(className, styles.root)}>
-        {posts.filter((post) => post._id).map(post =>
+        {posts.filter((post) => post._id === this.props.match.params.id).map(post =>
           (
             <div key={post._id}>
               <p>title: {post.title} </p>
@@ -55,8 +55,8 @@ Component.propTypes = {
   fetchPublishedPosts: PropTypes.func,
 };
 
-const mapStateToProps = (state) => ({
-  posts: getAll(state),
+const mapStateToProps = (state, props) => ({
+  posts: getPost(state, props.match.params.id),
   users: getUsers(state),
 });
 
